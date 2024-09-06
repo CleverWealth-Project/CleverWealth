@@ -1,4 +1,4 @@
-# 📊 **Finance Project: _Project Name_**
+# 📊 **Finance Project: CleverWealth**
 
 ![Finance Image](https://cdn.vectorstock.com/i/1000v/77/74/human-needs-finance-business-and-profit-wealth-vector-26717774.avif)
 
