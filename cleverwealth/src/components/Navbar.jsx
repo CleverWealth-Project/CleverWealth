@@ -61,6 +61,7 @@ export default function Navbar() {
         {/* Signup and Login Buttons */}
         <Box sx={{ display: 'flex', gap: 2 }}>
           <Button
+            component={Link} to="/signup"
             variant="outlined"
             sx={{
               color: isSticky ? '#000' : '#fff',
@@ -75,6 +76,7 @@ export default function Navbar() {
             Sign Up
           </Button>
           <Button
+            component={Link} to="/signup"
             variant="contained"
             sx={{
               borderRadius: '20px',
