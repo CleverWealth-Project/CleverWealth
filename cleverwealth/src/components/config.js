@@ -13,16 +13,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app)
+const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-export { auth, provider };
 
 export const signInWithGoogle = () => {
-    signInWithPopup(auth, provider)
+    return signInWithPopup(auth, provider) // Return the promise here
         .then((result) => {
             console.log('User signed in: ', result.user);
+            return result.user; // Return the user or any relevant data
         })
         .catch((error) => {
             console.error('Error signing in: ', error);
+            throw error; // Re-throw error if needed for further handling
         });
 };

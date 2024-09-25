@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 import CompanyPage from './components/CompanyPage';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import PricingPage from './components/PricingPage';
@@ -8,6 +9,7 @@ import ProductPage from './components/ProductPage';
 import SolutionsPage from './components/SolutionsPage';
 import UseCasesPage from './components/UseCasesPage';
 import SignUpForm from './components/SignUpForm';
+import Dashboard from './components/Dashboard';
 
 function App() {
   const location = useLocation(); // Get the current route
@@ -22,12 +24,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/solutions" element={<SolutionsPage />} />
         <Route path="/usecases" element={<UseCasesPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/company" element={<CompanyPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -1,37 +1,37 @@
 body {
-  margin: 2;
-  font-family: 'Roboto', sans-serif;
-  background-color: #7ED477;
-}
-
-.form-container {
-  height: 100vh;
-  display: flex;
-  width: 80vw; /* Set the container width to 80% of the viewport */
-  margin: 0 auto; /* Center the container */
-}
-
-.form-image {
-  display: none;
-}
-
-@media (min-width: 800px) {
-  .form-image {
-    display: block;
-    width: 50%; /* Image takes 50% of the container width */
+    margin: 2;
+    font-family: 'Roboto', sans-serif;
+    background-color: #7ED477;
   }
-}
-
-.signup-image {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
-.form-box {
-  width: 50%; /* Form box takes 50% of the container width */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
+  
+  .form-container {
+    height: 100vh;
+    display: flex;
+    width: 80vw; /* Set the container width to 80% of the viewport */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .form-image {
+    display: none;
+  }
+  
+  @media (min-width: 800px) {
+    .form-image {
+      display: block;
+      width: 50%; /* Image takes 50% of the container width */
+    }
+  }
+  
+  .signup-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .form-box {
+    width: 50%; /* Form box takes 50% of the container width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
