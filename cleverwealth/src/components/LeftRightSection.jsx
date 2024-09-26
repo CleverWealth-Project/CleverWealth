@@ -34,17 +34,17 @@ const LeftRightSection = () => {
               <Card sx={{ width: '200px', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Heading {idx + 1}
+                    Expense Tracking:{idx + 1}
                   </Typography>
                   <ul style={{ textAlign: 'left', paddingInlineStart: '20px' }}>
                     <li>
-                      <Typography variant="body2">Bullet point 1</Typography>
+                      <Typography variant="body2">Organize transactions.</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Bullet point 2</Typography>
+                      <Typography variant="body2">Graphical summaries of consumer behavior </Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Bullet point 2</Typography>
+                      <Typography variant="body2">Customizable monthly/weekly budgets</Typography>
                     </li>
                   </ul>
                 </CardContent>
