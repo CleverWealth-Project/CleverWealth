@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
-
-
+import waveImg from '../assets/waveImg.png';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
     // Define inline styles as a JavaScript object
@@ -30,47 +30,69 @@ const Footer = () => {
         transition: 'color 0.3s ease',
     };
 
-    const waveStyle = {
-        position: 'absolute',
-        top: '-100px',
-        left: '0',
+    const footerContainerStyle = {
+        width: '100%',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        backgroundColor: 'green', // Green background color
+        background: 'linear-gradient(green, rgba(144, 238, 144, 0.5))', // Green to light green gradient
+    };
+
+    // Inline style for the footer (waves container)
+    const footerStyles = {
+        position: 'relative',
         width: '100%',
         height: '100px',
-        background: '#0ff url(/waveImg.png)',
-        backgroundSize: '1000px 100px',
+        overflow: 'hidden', // Prevents waves from overflowing
     };
 
-    const wave1Style = {
-        ...waveStyle,
-        zIndex: 1000,
-        opacity: 1,
+    // Inline style for each wave div
+    const waveStyle = (zIndex) => ({
+        position: 'absolute',
+        left: 0,
         bottom: 0,
-        animation: 'animateWave 4s linear infinite',
+        width: '100%',
+        height: '100px',
+        backgroundImage: `url(${waveImg})`,
+        backgroundSize: '1000px 100px',
+        zIndex: zIndex,
+    });
+
+    // Framer Motion animations for waves
+    const waveAnimation1 = {
+        hidden: { backgroundPositionX: '0px', opacity: 0.6 },
+        visible: {
+            backgroundPositionX: '1000px',
+            transition: { repeat: Infinity, ease: 'linear', duration: 25 },
+        },
     };
 
-    const wave2Style = {
-        ...waveStyle,
-        zIndex: 999,
-        opacity: 0.5,
-        bottom: '10px',
-        animation: 'animateWave_02 4s linear infinite',
+    const waveAnimation2 = {
+        hidden: { backgroundPositionX: '0px', opacity: 0.5 },
+        visible: {
+            backgroundPositionX: '-1000px',
+            transition: { repeat: Infinity, ease: 'linear', duration: 15 },
+        },
     };
 
-    const wave3Style = {
-        ...waveStyle,
-        zIndex: 998,
-        opacity: 0.3,
-        bottom: '25px',
-        animation: 'animateWave_03 6s linear infinite',
+    const waveAnimation3 = {
+        hidden: { backgroundPositionX: '0px', opacity: 0.4 },
+        visible: {
+            backgroundPositionX: '1000px',
+            transition: { repeat: Infinity, ease: 'linear', duration: 10 },
+        },
     };
 
-    const wave4Style = {
-        ...waveStyle,
-        zIndex: 997,
-        opacity: 0.2,
-        bottom: '20px',
-        animation: 'animateWave_04 8s linear infinite',
+    const waveAnimation4 = {
+        hidden: { backgroundPositionX: '0px', opacity: 0.3 },
+        visible: {
+            backgroundPositionX: '-1000px',
+            transition: { repeat: Infinity, ease: 'linear', duration: 5 },
+        },
     };
+
 
     return (
         <div style={footerStyle}>
@@ -167,53 +189,7 @@ const Footer = () => {
 
             <p style={{ marginTop: '20px' }}>&copy; 2024 Your Website. All Rights Reserved.</p>
 
-            <div className="waves" style={{ position: 'relative', height: '150px', overflow: 'hidden' }}>
-                <div style={wave1Style} />
-                <div style={wave2Style} />
-                <div style={wave3Style} />
-                <div style={wave4Style} />
-            </div>
 
-            {/* Animation Styles */}
-            <style>
-                {`
-                    @keyframes animateWave {
-                        0% {
-                            background-position-x: 1000px;
-                        }
-                        100% {
-                            background-position-x: 0px;
-                        }
-                    }
-
-                    @keyframes animateWave_02 {
-                        0% {
-                            background-position-x: 0px;
-                        }
-                        100% {
-                            background-position-x: 1000px;
-                        }
-                    }
-
-                    @keyframes animateWave_03 {
-                        0% {
-                            background-position-x: 500px;
-                        }
-                        100% {
-                            background-position-x: -500px;
-                        }
-                    }
-
-                    @keyframes animateWave_04 {
-                        0% {
-                            background-position-x: 0px;
-                        }
-                        100% {
-                            background-position-x: 500px;
-                        }
-                    }
-                `}
-            </style>
         </div>
     );
 };
