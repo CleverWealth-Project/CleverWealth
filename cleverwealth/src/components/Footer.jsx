@@ -1,18 +1,18 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
-import waveImg from '../assets/waveImg.png';
-import { motion } from 'framer-motion';
+// import waveImg from '../assets/waveImg.png';
+// import { motion } from 'framer-motion';
 
 const Footer = () => {
     // Define inline styles as a JavaScript object
     const footerStyle = {
-        position: 'relative',
+        position: 'sticky',
         width: '100%',
         background: '#f5f5f5',
         minHeight: '150px',
-        padding: '20px',
+        padding: '20px 0',
         textAlign: 'center',
-        overflow: 'hidden', // Ensures waves don't overflow the footer
+        
     };
 
     const socialIcon = {
@@ -30,68 +30,68 @@ const Footer = () => {
         transition: 'color 0.3s ease',
     };
 
-    const footerContainerStyle = {
-        width: '100%',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        backgroundColor: 'green', // Green background color
-        background: 'linear-gradient(green, rgba(144, 238, 144, 0.5))', // Green to light green gradient
-    };
+    // const footerContainerStyle = {
+    //     width: '100%',
+    //     height: '100vh',
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     justifyContent: 'flex-end',
+    //     backgroundColor: 'green', // Green background color
+    //     background: 'linear-gradient(green, rgba(144, 238, 144, 0.5))', // Green to light green gradient
+    // };
 
     // Inline style for the footer (waves container)
-    const footerStyles = {
-        position: 'relative',
-        width: '100%',
-        height: '100px',
-        overflow: 'hidden', // Prevents waves from overflowing
-    };
+    // const footerStyles = {
+    //     position: 'relative',
+    //     width: '100%',
+    //     height: '100px',
+    //     // overflow: 'hidden', // Prevents waves from overflowing
+    // };
 
     // Inline style for each wave div
-    const waveStyle = (zIndex) => ({
-        position: 'absolute',
-        left: 0,
-        bottom: 0,
-        width: '100%',
-        height: '100px',
-        backgroundImage: `url(${waveImg})`,
-        backgroundSize: '1000px 100px',
-        zIndex: zIndex,
-    });
+    // const waveStyle = (zIndex) => ({
+    //     position: 'absolute',
+    //     left: 0,
+    //     bottom: 0,
+    //     width: '100%',
+    //     height: '100px',
+    //     backgroundImage: `url(${waveImg})`,
+    //     backgroundSize: '1000px 100px',
+    //     zIndex: zIndex,
+    // });
 
-    // Framer Motion animations for waves
-    const waveAnimation1 = {
-        hidden: { backgroundPositionX: '0px', opacity: 0.6 },
-        visible: {
-            backgroundPositionX: '1000px',
-            transition: { repeat: Infinity, ease: 'linear', duration: 25 },
-        },
-    };
+    // // Framer Motion animations for waves
+    // const waveAnimation1 = {
+    //     hidden: { backgroundPositionX: '0px', opacity: 0.6 },
+    //     visible: {
+    //         backgroundPositionX: '1000px',
+    //         transition: { repeat: Infinity, ease: 'linear', duration: 25 },
+    //     },
+    // };
 
-    const waveAnimation2 = {
-        hidden: { backgroundPositionX: '0px', opacity: 0.5 },
-        visible: {
-            backgroundPositionX: '-1000px',
-            transition: { repeat: Infinity, ease: 'linear', duration: 15 },
-        },
-    };
+    // const waveAnimation2 = {
+    //     hidden: { backgroundPositionX: '0px', opacity: 0.5 },
+    //     visible: {
+    //         backgroundPositionX: '-1000px',
+    //         transition: { repeat: Infinity, ease: 'linear', duration: 15 },
+    //     },
+    // };
 
-    const waveAnimation3 = {
-        hidden: { backgroundPositionX: '0px', opacity: 0.4 },
-        visible: {
-            backgroundPositionX: '1000px',
-            transition: { repeat: Infinity, ease: 'linear', duration: 10 },
-        },
-    };
+    // const waveAnimation3 = {
+    //     hidden: { backgroundPositionX: '0px', opacity: 0.4 },
+    //     visible: {
+    //         backgroundPositionX: '1000px',
+    //         transition: { repeat: Infinity, ease: 'linear', duration: 10 },
+    //     },
+    // };
 
-    const waveAnimation4 = {
-        hidden: { backgroundPositionX: '0px', opacity: 0.3 },
-        visible: {
-            backgroundPositionX: '-1000px',
-            transition: { repeat: Infinity, ease: 'linear', duration: 5 },
-        },
-    };
+    // const waveAnimation4 = {
+    //     hidden: { backgroundPositionX: '0px', opacity: 0.3 },
+    //     visible: {
+    //         backgroundPositionX: '-1000px',
+    //         transition: { repeat: Infinity, ease: 'linear', duration: 5 },
+    //     },
+    // };
 
 
     return (

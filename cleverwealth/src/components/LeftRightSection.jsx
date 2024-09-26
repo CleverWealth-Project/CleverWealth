@@ -4,7 +4,7 @@ import { Box, Button, Card, CardContent, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { FaAppStoreIos } from 'react-icons/fa';
 import { BiLogoPlayStore } from 'react-icons/bi';
-import qr from '../assets/qr.png';
+import piggy from '../assets/piggy.png';
 
 const LeftRightSection = () => {
   return (
@@ -29,34 +29,69 @@ const LeftRightSection = () => {
         }}
       >
         <Grid container spacing={4} sx={{ width: '80%' }}>
-          {Array.from({ length: 3 }).map((_, idx) => (
-            <Grid item xs={6} key={idx}>
-              <Card sx={{ width: '200px', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
+
+            <Grid item xs={6}>
+              <Card sx={{ width: '200px', height:'175px', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Expense Tracking:{idx + 1}
+                    Buy a House
                   </Typography>
                   <ul style={{ textAlign: 'left', paddingInlineStart: '20px' }}>
                     <li>
-                      <Typography variant="body2">Organize transactions.</Typography>
+                      <Typography variant="body2">In 5 Years</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Graphical summaries of consumer behavior </Typography>
+                      <Typography variant="body2">Family Savings </Typography>
+                    </li>
+                    
+                  </ul>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={6}>
+              <Card sx={{ width: '200px',
+                height:'175px', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    New Car
+                  </Typography>
+                  <ul style={{ textAlign: 'left', paddingInlineStart: '20px' }}>
+                    <li>
+                      <Typography variant="body2">In 2 Years</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Customizable monthly/weekly budgets</Typography>
+                      <Typography variant="body2">Personal Savings </Typography>
+                    </li>
+                    
+                  </ul>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={6}>
+              <Card sx={{ width: '200px',
+                height:'175px', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Vacation
+                  </Typography>
+                  <ul style={{ textAlign: 'left', paddingInlineStart: '20px' }}>
+                    <li>
+                      <Typography variant="body2">In 1 Year</Typography>
+                    </li>
+                    <li>
+                      <Typography variant="body2">Family  </Typography>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </Grid>
-          ))}
+          
 
           {/* Fourth card with image */}
           <Grid item xs={6}>
             <Card sx={{ width: '200px', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
               <CardContent>
-                <img src={qr} alt="Sample" style={{ width: '130px', borderRadius: '10px' }} />
+                <img src={piggy} alt="Sample" style={{ width: '130px', borderRadius: '10px' }} />
               </CardContent>
             </Card>
           </Grid>
