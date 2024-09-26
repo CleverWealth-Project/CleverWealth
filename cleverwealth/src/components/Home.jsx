@@ -6,6 +6,7 @@ import { BiLogoPlayStore } from "react-icons/bi";
 import { FaAppStoreIos } from "react-icons/fa";
 import WhyCleverWealth from './WhyCleverWealth';
 import LeftRightSection from './LeftRightSection';
+import InfoSection from './InfoSection';
 import mockimg from '../assets/final.png';
 import qr from '../assets/qr.png';
 
@@ -98,6 +99,7 @@ export default function HomePage() {
       </HeroSection>
       <WhyCleverWealth/>
       <LeftRightSection/>
+      <InfoSection/>
     </div>
   );
 }
